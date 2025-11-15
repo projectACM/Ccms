@@ -130,6 +130,7 @@ a:hover {
 
 .btn-secondary:hover {
     background-color: #ff5e23;
+    color:#D7DADC;
 }
 
 /* --- Forms --- */
@@ -426,5 +427,5 @@ input:checked + .slider:before {
 }
 /* custom */
 .accent{
-    color: var(--accent-color);
+    color: var(--accent-color) !important;
 }
