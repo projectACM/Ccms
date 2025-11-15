@@ -1,13 +1,14 @@
 /* --- General & Dark Theme --- */
 :root {
-    --bg-color: #1a1a2e;
-    --primary-color: #16213e;
-    --secondary-color: #0f3460;
-    --accent-color: #e94560;
-    --font-color: #dcdcdc;
+    --bg-color: #1A1A1B;
+    --primary-color: #272729;
+    --secondary-color: #343536;
+    --accent-color: #FF4500;
+    --font-color: #D7DADC;
+    --subtext-color: #818384;
     --border-radius: 8px;
-    --shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    --gradient: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+    --shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    --gradient: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
 }
 
 body {
@@ -109,7 +110,7 @@ a:hover {
 }
 
 .btn-secondary:hover {
-    background-color: #1b4a8b;
+    background-color: #ff5e23;
 }
 
 /* --- Forms --- */
@@ -250,12 +251,25 @@ a:hover {
 }
 
 .credit-card {
-    background: linear-gradient(45deg, #2c3e50, #4ca1af);
-    padding: 1.5rem;
-    border-radius: 15px;
-    color: #fff;
-    box-shadow: var(--shadow);
+    width: 350px;
+    padding: 20px;
+    border-radius: 16px;
+    background: linear-gradient(45deg, #272729, #343536);  /* smooth dark gradient */
+    color: var(--font-color);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
     position: relative;
+    overflow: hidden;
+}
+
+.credit-card::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -40%;
+    width: 180%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+    opacity: 0.6;
 }
 
 .card-header {
