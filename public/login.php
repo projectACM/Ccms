@@ -1,12 +1,13 @@
 <?php
 require_once '../config/db.php';
-require_once 'partials/header.php';
 
 // If user is already logged in, redirect to dashboard
 if (is_logged_in()) {
     header('Location: dashboard.php');
     exit;
 }
+
+require_once 'partials/header.php';
 
 $error = '';
 
