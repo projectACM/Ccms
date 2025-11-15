@@ -44,6 +44,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
+<div class="brand-header">
+    <h1 class="brand-title">CredX</h1>
+</div>
+
 <div class="form-container">
     <form action="login.php" method="POST" class="auth-form">
         <h2>Welcome Back!</h2>

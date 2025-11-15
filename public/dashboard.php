@@ -14,7 +14,7 @@ require_once 'partials/navbar.php';
 <div class="dashboard-grid">
     <!-- Real Feature: My Cards -->
     <div class="dashboard-card">
-        <h3><a href="cards.php">My Credit Cards</a></h3>
+        <h3><a href="cards.php" class="accent">CredX</a></h3>
         <p>View, add, and manage your credit cards.</p>
         <div class="card-icon">💳</div>
         <a href="cards.php" class="card-link">Manage Cards &rarr;</a>

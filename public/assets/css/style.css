@@ -32,7 +32,7 @@ a {
 }
 
 a:hover {
-    color: #ff7a92;
+    color: #ff5e23;
 }
 
 /* --- Navbar --- */
@@ -83,6 +83,25 @@ a:hover {
     margin-bottom: 0.5rem;
 }
 
+/* --- Brand Header --- */
+.brand-header {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    margin-bottom: 1rem;
+}
+
+.brand-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, var(--accent-color), #ff6b35);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: 0;
+    text-transform: uppercase;
+}
+
 /* --- Buttons --- */
 .btn {
     padding: 0.75rem 1.5rem;
@@ -99,9 +118,9 @@ a:hover {
 }
 
 .btn-primary:hover {
-    background-color: #ff7a92;
+    background-color: #ff5e23;
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3);
+    box-shadow: 0 6px 20px rgba(255, 69, 0, 0.35);
 }
 
 .btn-secondary {
@@ -116,6 +135,7 @@ a:hover {
 /* --- Forms --- */
 .form-container {
     display: flex;
+    row-gap: 5px;
     justify-content: center;
     align-items: center;
     min-height: 80vh;
@@ -254,7 +274,7 @@ a:hover {
     width: 350px;
     padding: 20px;
     border-radius: 16px;
-    background: linear-gradient(45deg, #272729, #343536);  /* smooth dark gradient */
+    background: linear-gradient(45deg, #3a3b3d, #4a4b4d);
     color: var(--font-color);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.45);
     position: relative;
@@ -403,4 +423,8 @@ input:checked + .slider:before {
 #autopay-status {
     margin-left: 1rem;
     vertical-align: middle;
+}
+/* custom */
+.accent{
+    color: var(--accent-color);
 }

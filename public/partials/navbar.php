@@ -1,6 +1,6 @@
 <nav class="navbar">
     <div class="navbar-brand">
-        <a href="dashboard.php">CCMS</a>
+        <a href="dashboard.php" class="accent">CredX</a>
     </div>
     <div class="navbar-links">
         <a href="dashboard.php">Dashboard</a>
