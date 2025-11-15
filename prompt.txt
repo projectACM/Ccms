@@ -1,0 +1,169 @@
+
+I want you to generate a complete, deploy-ready credit card management website using ONLY basic PHP, HTML, CSS, and vanilla JavaScript. Do NOT use any frameworks or build tools (no Laravel, no React, no Tailwind, no Bootstrap, no Composer). Just plain PHP files, CSS, and JS.
+
+### 1. Tech & Deployment Requirements
+
+* Backend language: **PHP** (plain, no frameworks)
+* Frontend: **HTML + CSS + vanilla JS**
+* Database: **MySQL**, hosted on **Railway**
+* Hosting: **Render** (PHP app)
+* Project must be deploy-friendly:
+
+  * Use environment variables for DB config: `DB_HOST`, `DB_NAME`, `DB_USER`, `DB_PASS`, `DB_PORT`
+  * Use a single public entry file such as **public/index.php**
+  * No dependencies requiring extra setup
+* Include a detailed **README.md** with:
+
+  * Steps to import `schema.sql` into Railway
+  * Steps to configure environment variables on Render
+  * Deployment instructions
+
+### 2. Features (High-Level)
+
+The app is a **Credit Card Management System** with 8 frontend features, where only login, registration, and card CRUD have real backend functionality:
+
+1. **User login** (real backend)
+2. **User registration** (real backend)
+3. **User profile page** (real backend: ability to update profile info)
+4. **Adding, editing and deleting credit cards (CRUD)** (real backend)
+5. **Expenditure analysis (dummy)**
+6. **EMI & rewards (dummy)**
+7. **Autopay setup for credit card bills (dummy)**
+8. **Credit score monitoring (dummy)**
+9. **Fraud monitoring (dummy)**
+
+Only these interact with the database:
+
+* User login / signup
+* User profile
+* Card CRUD
+
+The dummy features MUST stay frontend-only (mock/static JS data).
+
+### 3. Pages & Structure
+
+Use a simple beginner-friendly file layout:
+
+* `public/`
+
+  * `index.php`
+  * `login.php`
+  * `register.php`
+  * `dashboard.php`
+  * **`profile.php` (user profile page)**
+  * `cards.php`
+  * `logout.php`
+  * `partials/` (`header.php`, `navbar.php`, `footer.php`)
+  * `assets/`
+
+    * `css/style.css`
+    * `js/main.js`
+* `config/db.php`
+* `schema.sql`
+* `README.md`
+
+### 4. Database & schema.sql
+
+Generate a **schema.sql** file that creates the database tables below:
+
+**users**
+
+* id INT PRIMARY KEY AUTO_INCREMENT
+* name VARCHAR(100)
+* email VARCHAR(150) UNIQUE
+* password_hash VARCHAR(255)
+* phone VARCHAR(20) NULL
+* created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+
+**cards**
+
+* id INT PRIMARY KEY AUTO_INCREMENT
+* user_id INT NOT NULL (FK to users.id)
+* card_name VARCHAR(100) NOT NULL
+* bank_name VARCHAR(100) NOT NULL
+* last4 VARCHAR(4) NOT NULL
+* limit_amount DECIMAL(12,2) NOT NULL
+* current_balance DECIMAL(12,2) NOT NULL DEFAULT 0
+* statement_date DATE
+* due_date DATE
+* created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+* updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+Include foreign key:
+`FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE`
+
+### 5. Backend Logic (PHP)
+
+**Authentication**
+
+* Registration validates email uniqueness and hashes passwords using `password_hash()`
+* Login uses `password_verify()` and stores session variables
+* Auth guard: redirect to login if not logged in
+* Logout destroys session
+
+**Card CRUD**
+
+* All operations require a logged-in user
+* Use PDO + prepared statements
+* Always scope queries with `WHERE user_id = :user_id`
+
+**User Profile Page**
+
+* Prefill form with existing user info
+* User can update name, email, phone
+* Email must remain unique
+* Password change optional (only update if entered)
+* Use the database and PDO; update only for the logged-in user
+
+### 6. Dummy Features (Frontend Only)
+
+Dashboard modules should look real but use **mock JS data only**:
+
+* Expenditure analysis
+* EMI & rewards
+* Autopay setup (UI toggle only)
+* Credit score
+* Fraud monitoring alerts
+
+No DB interaction for these.
+
+### 7. UI/UX & Styling Requirements
+
+* **Dark theme**
+* No CSS libraries — only custom CSS in `style.css`
+* Requirements:
+
+  * Card-style design with soft shadows and gradients
+  * Rounded corners
+  * Hover transitions
+  * Responsive layout
+* Dashboard is a grid of cards
+* Credit cards page uses visually aesthetic card components with masked numbers and progress bars
+
+### 8. JavaScript
+
+Use `main.js` for:
+
+* Dummy data interactions
+* Dashboard behavior
+* Autopay toggles
+* UI animations
+
+No external libraries or chart plugins.
+
+### 9. Final Output
+
+Generate the **complete runnable project**, including:
+
+* All PHP pages
+* All CSS & JS files
+* `schema.sql`
+* `README.md` with deployment instructions
+
+The website must run successfully after:
+
+1. Importing `schema.sql` to Railway
+2. Setting environment variables on Render
+3. Deploying the PHP project
+
+
