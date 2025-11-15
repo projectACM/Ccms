@@ -46,8 +46,6 @@ This guide will walk you through deploying the application using Render for the 
 
 ### Step 2: Deploy the PHP Application on Render
 
-This section describes how to deploy using Render's native PHP runtime. For a Docker-based deployment, see the next section.
-
 1.  **Create a Render Account**: Sign up at [render.com](https://render.com/).
 2.  **Create a New Web Service**:
     - Click "New +" and select "Web Service".
@@ -73,24 +71,6 @@ This section describes how to deploy using Render's native PHP runtime. For a Do
 5.  **Deploy**:
     - Click "Create Web Service". Render will automatically pull your code, configure the environment, and start the application.
     - Once deployed, you can access your live site at the URL provided by Render.
-
-### Alternative: Deploying with Docker on Render
-
-If you prefer to use Docker for a more consistent environment, you can use the `Dockerfile` included in this repository.
-
-1.  **Follow Steps 1 and 2** from the previous section.
-2.  **Configure the Service**:
-    - **Name**: Give your service a name (e.g., `ccms-app-docker`).
-    - **Region**: Choose a region close to your Railway database region.
-    - **Branch**: Select your main branch.
-    - **Runtime**: Select **Docker**. Render will automatically detect and use the `Dockerfile`.
-    - **Build Command**: Leave this blank.
-    - **Start Command**: Leave this blank (the `Dockerfile` handles this).
-    - **Instance Type**: The "Free" tier is sufficient.
-3.  **Add Environment Variables**:
-    - Follow the same process as in Step 4 of the previous section to add your database credentials.
-4.  **Deploy**:
-    - Click "Create Web Service". Render will build the Docker image and deploy it.
 
 ## How It Works
 
