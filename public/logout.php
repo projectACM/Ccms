@@ -1,5 +1,5 @@
 <?php
-session_start();
+require_once '../config/db.php';
 
 // Unset all of the session variables
 $_SESSION = [];

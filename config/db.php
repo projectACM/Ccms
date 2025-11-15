@@ -1,4 +1,9 @@
 <?php
+// Start session at the beginning
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 // Show an instructional message if we're not in a Render environment
 if (empty(getenv('RENDER'))) {
     echo "<div style='font-family: sans-serif; padding: 1.5rem; background-color: #f8d7da; border: 1px solid #f5c6cb; color: #721c24; border-radius: 5px; margin: 1rem;'>";

@@ -1,6 +1,5 @@
 <?php
 require_once '../config/db.php';
-session_start();
 protect_page();
 
 require_once 'partials/header.php';

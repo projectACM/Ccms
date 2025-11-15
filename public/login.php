@@ -1,4 +1,3 @@
-
 <?php
 require_once '../config/db.php';
 
@@ -8,8 +7,9 @@ if (is_logged_in()) {
     exit;
 }
 
-$error = '';
+require_once 'partials/header.php';
 
+$error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email = trim($_POST['email']);
@@ -42,8 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
-require_once 'partials/header.php';
 ?>
 
 <div class="form-container">

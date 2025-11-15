@@ -1,6 +1,5 @@
 <?php
 require_once '../config/db.php';
-session_start();
 protect_page();
 
 $user_id = $_SESSION['user_id'];

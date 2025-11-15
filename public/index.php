@@ -1,6 +1,5 @@
 <?php
 require_once '../config/db.php';
-session_start();
 
 // If user is logged in, redirect to dashboard
 if (is_logged_in()) {
