@@ -7,6 +7,8 @@ if (is_logged_in()) {
     exit;
 }
 
+require_once 'partials/header.php';
+
 $error = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -40,8 +42,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
-
-require_once 'partials/header.php';
 ?>
 
 <div class="form-container">
