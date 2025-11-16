@@ -23,30 +23,30 @@ require_once 'partials/navbar.php';
         </div>
         <div class="summary-card">
             <h4>Points Value</h4>
-            <p id="emi-points-value">$0.00</p>
+            <p id="emi-points-value">₹0.00</p>
         </div>
     </div>
 
     <div class="content-box">
-        <h3>Active EMIs (Mock Data)</h3>
+        <h3>Active EMIs</h3>
         <div class="list-item">
             <div class="item-details">
                 <strong>iPhone 15 Pro</strong>
                 <span>Paid 3 of 12 installments</span>
             </div>
-            <div class="item-value">$100.00 / month</div>
+            <div class="item-value">₹100.00 / month</div>
         </div>
         <div class="list-item">
             <div class="item-details">
                 <strong>Sony Bravia TV</strong>
                 <span>Paid 8 of 18 installments</span>
             </div>
-            <div class="item-value">$75.50 / month</div>
+            <div class="item-value">₹75.50 / month</div>
         </div>
     </div>
 
     <div class="content-box">
-        <h3>Reward Points by Card (Mock Data)</h3>
+        <h3>Reward Points by Card</h3>
         <div class="list-item">
             <div class="item-details">
                 <strong>Shopping Card</strong>

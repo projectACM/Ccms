@@ -15,7 +15,7 @@ require_once 'partials/navbar.php';
     <div class="summary-cards">
         <div class="summary-card">
             <h4>Total Spending (This Month)</h4>
-            <p id="analysis-total-spending">$0.00</p>
+            <p id="analysis-total-spending">₹0.00</p>
         </div>
         <div class="summary-card">
             <h4>Top Spending Category</h4>
@@ -28,7 +28,7 @@ require_once 'partials/navbar.php';
     </div>
 
     <div class="chart-container">
-        <h3>Spending by Category (Dummy Chart)</h3>
+        <h3>Spending by Category</h3>
         <div class="dummy-chart">
             <div class="bar" style="height: 60%;"><span class="label">Shopping</span></div>
             <div class="bar" style="height: 80%;"><span class="label">Groceries</span></div>
@@ -39,12 +39,12 @@ require_once 'partials/navbar.php';
     </div>
 
     <div class="transaction-list">
-        <h3>Recent Transactions (Mock Data)</h3>
+        <h3>Recent Transactions</h3>
         <ul>
-            <li><strong>Amazon:</strong> $120.50 on 'Shopping Card'</li>
-            <li><strong>Walmart:</strong> $85.20 on 'Groceries Card'</li>
-            <li><strong>Uber:</strong> $25.00 on 'Travel Card'</li>
-            <li><strong>Netflix:</strong> $15.99 on 'Bills Card'</li>
+            <li><strong>Amazon:</strong> ₹120.50 on 'Shopping Card'</li>
+            <li><strong>Walmart:</strong> ₹85.20 on 'Groceries Card'</li>
+            <li><strong>Uber:</strong> ₹25.00 on 'Travel Card'</li>
+            <li><strong>Netflix:</strong> ₹15.99 on 'Bills Card'</li>
         </ul>
     </div>
 </div>

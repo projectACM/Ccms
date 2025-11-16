@@ -26,7 +26,7 @@ require_once 'partials/navbar.php';
         <p>Visualize your spending habits.</p>
         <div class="card-icon">📊</div>
         <div class="dummy-content">
-            <p><strong>This Month's Spending:</strong> <span id="total-spending">$0.00</span></p>
+            <p><strong>This Month's Spending:</strong> <span id="total-spending">₹0.00</span></p>
             <p><strong>Top Category:</strong> <span id="top-category">N/A</span></p>
         </div>
         <a href="spend_analysis.php" class="card-link">View Analysis &rarr;</a>

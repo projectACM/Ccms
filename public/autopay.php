@@ -13,13 +13,13 @@ require_once 'partials/navbar.php';
 
 <div class="autopay-container">
     <div class="content-box">
-        <h3>Manage Autopay (Mock UI)</h3>
+        <h3>Manage Autopay</h3>
         <p>Enable or disable autopay for each of your cards. When enabled, the total amount due will be paid automatically on the due date.</p>
         
         <div class="autopay-item">
             <div class="card-info">
                 <strong>Shopping Card (•••• 1234)</strong>
-                <span>Bank of America</span>
+                <span>Bank of India</span>
             </div>
             <div class="autopay-toggle">
                 <label class="switch">
@@ -33,7 +33,7 @@ require_once 'partials/navbar.php';
         <div class="autopay-item">
             <div class="card-info">
                 <strong>Travel Card (•••• 5678)</strong>
-                <span>Chase</span>
+                <span>PNB</span>
             </div>
             <div class="autopay-toggle">
                 <label class="switch">
@@ -47,7 +47,7 @@ require_once 'partials/navbar.php';
         <div class="autopay-item">
             <div class="card-info">
                 <strong>Groceries Card (•••• 9876)</strong>
-                <span>Citibank</span>
+                <span>SBI</span>
             </div>
             <div class="autopay-toggle">
                 <label class="switch">
