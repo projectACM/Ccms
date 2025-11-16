@@ -173,7 +173,7 @@ require_once 'partials/navbar.php';
                     </div>
                 </div>
                 <div class="card-balance">
-                    <span>Balance:</span> $<?php echo number_format($card['current_balance'], 2); ?> / $<?php echo number_format($card['limit_amount'], 2); ?>
+                    <span>Balance:</span> ₹<?php echo number_format($card['current_balance'], 2); ?> / ₹<?php echo number_format($card['limit_amount'], 2); ?>
                 </div>
                 <div class="progress-bar">
                     <?php 
